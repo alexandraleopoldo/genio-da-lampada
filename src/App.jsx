@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 body {
   font-family: "Sevillana", cursive;
   width: 100vw;
-  min-height:100vh;
+  min-height: 100vh;
   overflow-x: hidden;
   background-image: url("https://github.com/mariaccarolina/TurmaFDV/blob/main/imagens/Imagem%20palacio.png?raw=true");
 
@@ -26,10 +26,12 @@ body {
 
 main {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  
  
 };
 
@@ -62,8 +64,10 @@ const Botao = styled.button`
 
 const Imagens = styled.img`
   @media (max-width: 900px) {
-    width: 350px;
-    height: 450px;
+    width: 450px;
+    height: 550px;
+    flex: 1;
+    object-fit: contain;
   }
 `;
 
