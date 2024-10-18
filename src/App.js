@@ -11,13 +11,14 @@ const GlobalStyle = createGlobalStyle`
 body {
   font-family: "Sevillana", cursive;
   width: 100vw;
-  height:100vh;
+  min-height:100vh;
   overflow-x: hidden;
   background-image: url("https://github.com/mariaccarolina/TurmaFDV/blob/main/imagens/Imagem%20palacio.png?raw=true");
 
   @media (max-width: 900px) {
     background-image: url("https://github.com/mariaccarolina/TurmaFDV/blob/main/imagens/imagem%20do%20palacio.png?raw=true");
     background-size: cover;
+    background-repeat: no-repeat;
 
   }
 
@@ -41,7 +42,7 @@ const Titulo = styled.h1`
   font-size: 4rem;
 
   @media (max-width: 900px) {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -59,6 +60,13 @@ const Botao = styled.button`
   }
 `;
 
+const Imagens = styled.img`
+  @media (max-width: 900px) {
+    width: 350px;
+    height: 450px;
+  }
+`;
+
 export default function App() {
   const [lampada, setLampada] = useState(false);
   const trocarLampada = () => {
@@ -68,7 +76,7 @@ export default function App() {
     <main>
       <GlobalStyle />
       <Titulo>"Liberte a magia da programação com a lâmpada de Aladim."</Titulo>
-      <img
+      <Imagens
         src={
           lampada
             ? "https://github.com/mariaccarolina/TurmaFDV/blob/main/imagens/lampada-com-mago.png?raw=true"
