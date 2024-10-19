@@ -65,7 +65,7 @@ const Botao = styled.button`
 const Imagens = styled.img`
   @media (max-width: 900px) {
     width: 450px;
-    height: 550px;
+    height: 500px;
     flex: 1;
     object-fit: contain;
   }
